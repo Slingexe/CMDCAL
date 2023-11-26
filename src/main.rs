@@ -8,6 +8,10 @@ fn main() {
     println!(" | |    | |\\/| | |  | | |      / /\\ \\ | |     ");
     println!(" | |____| |  | | |__| | |____ / ____ \\| |____ ");
     println!("  \\_____|_|  |_|_____/ \\_____/_/    \\_\\______|");
+    menu()
+}
+
+fn menu() {
     let mut caltype;
     loop {
         println!("What type of calculation would you like to do?");
@@ -93,6 +97,7 @@ fn add() {
     clear_terminal();
     let result = operation1 + operation2;
     println!("{operation1} + {operation2} = {result}");
+    menu();
 }
 
 fn subtract() {
@@ -139,6 +144,7 @@ fn subtract() {
     clear_terminal();
     let result = operation1 - operation2;
     println!("{operation1} - {operation2} = {result}");
+    menu();
 }
 
 fn multiply() {
@@ -185,6 +191,7 @@ fn multiply() {
     clear_terminal();
     let result = operation1 * operation2;
     println!("{operation1} * {operation2} = {result}");
+    menu();
 }
 
 fn divide() {
@@ -231,6 +238,7 @@ fn divide() {
     clear_terminal();
     let result = operation1 / operation2;
     println!("{operation1} / {operation2} = {result}");
+    menu();
 }
 
 fn clear_terminal() {
