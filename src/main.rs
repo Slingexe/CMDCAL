@@ -1,4 +1,4 @@
-use std::io::{self};
+use std::io;
 
 fn main() {
     clear_terminal();
@@ -15,9 +15,10 @@ fn main() {
         println!("- for subtract");
         println!("* for multiply");
         println!("/ for divide");
+        println!("Exit to well... exit");
         caltype = String::new();
         io::stdin().read_line(&mut caltype).expect("Cannot read line");
-        match caltype.trim() {
+        match caltype.to_lowercase().trim() {
             "+" => {
                 add();
                 break;
@@ -32,6 +33,11 @@ fn main() {
             }
             "/" => {
                 divide();
+                break;
+            }
+            "exit" => {
+                clear_terminal();
+                println!("Bye ig");
                 break;
             }
             _ => {
